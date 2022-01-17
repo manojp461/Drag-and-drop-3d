@@ -8,12 +8,6 @@ public class PageNavigator : MonoBehaviour
     public GameObject Page01;
     public GameObject Page02;
 
-    private ObjectCollision objectCollision;
-
-    //private void Start()
-    //{
-    //    //objectCollision = gameObject.GetComponent<ObjectCollision>();
-    //}
     public void Page01NextButton()
     {
         Page01.SetActive(false);
@@ -24,11 +18,11 @@ public class PageNavigator : MonoBehaviour
     {
         Page02.SetActive(false);
         Page01.SetActive(true);
-        objectCollision.resultPanel.SetActive(false);
-        objectCollision.WrongResultText.SetActive(false);
-        objectCollision.CorrectResultText.SetActive(false);
-        objectCollision.cube01.SetActive(true);
-        objectCollision.cylinder04.SetActive(true);
-        //objectCollision.cube01.transform.position = objectCollision.orginalCube01Pos;
+        ObjectCollisionFunctionality.instance.CorrectResultText.SetActive(false);
+        ObjectCollisionFunctionality.instance.WrongResultText.SetActive(false);
+        ObjectCollisionFunctionality.instance.resultPanel.SetActive(false);
+        ObjectCollisionFunctionality.instance.cube01.SetActive(true);
+        ObjectCollisionFunctionality.instance.cylinder04.SetActive(true);
+        Debug.Log('1');
     }
 }

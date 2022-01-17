@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125299328}
   - component: {fileID: 125299329}
+  - component: {fileID: 125299330}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -166,7 +167,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Page01: {fileID: 1025655002}
   Page02: {fileID: 1345586269}
-  objectCollision: {fileID: 0}
+--- !u!114 &125299330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125299327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2add81e2361ff2a49b3155ef2af7ee80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube01: {fileID: 483000939}
+  sphere02: {fileID: 779551619}
+  cube03: {fileID: 1017707194}
+  cylinder04: {fileID: 1014201025}
+  resultPanel: {fileID: 1419437166}
+  WrongResultText: {fileID: 1108391245}
+  CorrectResultText: {fileID: 1155985650}
 --- !u!1 &213595550
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,14 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 483000939}
-  sphere02: {fileID: 779551619}
-  cube03: {fileID: 1017707194}
-  cylinder04: {fileID: 1014201025}
-  resultPanel: {fileID: 1419437166}
-  WrongResultText: {fileID: 1108391245}
-  CorrectResultText: {fileID: 1155985650}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 125299330}
 --- !u!54 &483000945
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1277,14 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 483000939}
-  sphere02: {fileID: 779551619}
-  cube03: {fileID: 1017707194}
-  cylinder04: {fileID: 1014201025}
-  resultPanel: {fileID: 1419437166}
-  WrongResultText: {fileID: 1108391245}
-  CorrectResultText: {fileID: 1155985650}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 125299330}
 --- !u!1 &820615146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,14 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 483000939}
-  sphere02: {fileID: 779551619}
-  cube03: {fileID: 1017707194}
-  cylinder04: {fileID: 1014201025}
-  resultPanel: {fileID: 1419437166}
-  WrongResultText: {fileID: 1108391245}
-  CorrectResultText: {fileID: 1155985650}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 125299330}
 --- !u!1 &1017707194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,14 +1920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 483000939}
-  sphere02: {fileID: 779551619}
-  cube03: {fileID: 1017707194}
-  cylinder04: {fileID: 1014201025}
-  resultPanel: {fileID: 1419437166}
-  WrongResultText: {fileID: 1108391245}
-  CorrectResultText: {fileID: 1155985650}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 125299330}
 --- !u!1 &1025655002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,14 +2537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 1480689895}
-  sphere02: {fileID: 1547915642}
-  cube03: {fileID: 1786712968}
-  cylinder04: {fileID: 1385561707}
-  resultPanel: {fileID: 1589487279}
-  WrongResultText: {fileID: 2004792382}
-  CorrectResultText: {fileID: 1240435596}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 0}
 --- !u!114 &1385561710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2817,14 +2801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 1480689895}
-  sphere02: {fileID: 1547915642}
-  cube03: {fileID: 1786712968}
-  cylinder04: {fileID: 1385561707}
-  resultPanel: {fileID: 1589487279}
-  WrongResultText: {fileID: 2004792382}
-  CorrectResultText: {fileID: 1240435596}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 0}
 --- !u!65 &1480689899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3004,14 +2981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 1480689895}
-  sphere02: {fileID: 1547915642}
-  cube03: {fileID: 1786712968}
-  cylinder04: {fileID: 1385561707}
-  resultPanel: {fileID: 1589487279}
-  WrongResultText: {fileID: 2004792382}
-  CorrectResultText: {fileID: 1240435596}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 0}
 --- !u!114 &1547915644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3288,14 +3258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f785db298c8a447a615f5d06f1e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube01: {fileID: 1480689895}
-  sphere02: {fileID: 1547915642}
-  cube03: {fileID: 1786712968}
-  cylinder04: {fileID: 1385561707}
-  resultPanel: {fileID: 1589487279}
-  WrongResultText: {fileID: 2004792382}
-  CorrectResultText: {fileID: 1240435596}
-  orginalCube01Pos: {x: 0, y: 0, z: 0}
+  objectCollisionFunctionality: {fileID: 0}
 --- !u!114 &1786712970
 MonoBehaviour:
   m_ObjectHideFlags: 0
