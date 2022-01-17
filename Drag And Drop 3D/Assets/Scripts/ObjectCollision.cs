@@ -6,19 +6,18 @@ using TMPro;
 public class ObjectCollision : MonoBehaviour
 {
     public static bool isCollision;
-    public ObjectCollisionFunctionality objectCollisionFunctionality;
 
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Correct")
         {
             isCollision = true;
-            objectCollisionFunctionality.CollisionBody();
+            ObjectCollisionFunctionality.instance.CollisionBody();
         }
         else if(collision.gameObject.tag == "Wrong")
         {
             isCollision = false;
-            objectCollisionFunctionality.CollisionBody();
+            ObjectCollisionFunctionality.instance.CollisionBody();
         }
     }
 }

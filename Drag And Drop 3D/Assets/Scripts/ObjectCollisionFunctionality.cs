@@ -12,7 +12,7 @@ public class ObjectCollisionFunctionality : MonoBehaviour
     public GameObject WrongResultText;
     public GameObject CorrectResultText;
 
-    private Vector3 orginalCube01Pos;
+    public Vector3 orginalCube01Pos;
 
     public static ObjectCollisionFunctionality instance;
 
