@@ -7,6 +7,7 @@ public class PageNavigator : MonoBehaviour
 {
     public GameObject Page01;
     public GameObject Page02;
+    public GameObject Page03;
 
     public void Page01NextButton()
     {
@@ -24,5 +25,16 @@ public class PageNavigator : MonoBehaviour
         ObjectCollisionFunctionality.instance.resultPanel.SetActive(false);
         ObjectCollisionFunctionality.instance.cube01.SetActive(true);
         ObjectCollisionFunctionality.instance.cylinder04.SetActive(true);
+    }
+
+    public void Page02NextButton()
+    {
+        Page02.SetActive(false);
+        Page03.SetActive(true);
+    }
+    public void Page03PreviousButton()
+    {
+        Page03.SetActive(false);
+        Page02.SetActive(true);
     }
 }
