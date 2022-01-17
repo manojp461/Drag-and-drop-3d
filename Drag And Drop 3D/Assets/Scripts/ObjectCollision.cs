@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Cube01AndCylinder04Collision : MonoBehaviour
+public class ObjectCollision : MonoBehaviour
 {
     public GameObject cube01;
     public GameObject sphere02;
@@ -13,6 +13,12 @@ public class Cube01AndCylinder04Collision : MonoBehaviour
     public GameObject WrongResultText;
     public GameObject CorrectResultText;
 
+    public Vector3 orginalCube01Pos;
+    
+    private void Start()
+    {
+        orginalCube01Pos = cube01.transform.position;    
+    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Correct")
@@ -26,6 +32,7 @@ public class Cube01AndCylinder04Collision : MonoBehaviour
         {
             resultPanel.SetActive(true);
             WrongResultText.SetActive(true);
+            cube01.transform.position = orginalCube01Pos;
         }
     }
 }
