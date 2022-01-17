@@ -168,6 +168,8 @@ MonoBehaviour:
   Page01: {fileID: 1025655002}
   Page02: {fileID: 1345586269}
   Page03: {fileID: 1172650667}
+  ammeterNidle: {fileID: 1786855279}
+  slider: {fileID: 470787565}
 --- !u!114 &125299330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1020,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2097813238}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5637,6 +5639,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721981830}
   m_CullTransparentMesh: 0
+--- !u!1 &1786855279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4424001530109178391, guid: 7ff4f448e5647a04ca4893d5e002be69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504074946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1823562005
 GameObject:
   m_ObjectHideFlags: 0

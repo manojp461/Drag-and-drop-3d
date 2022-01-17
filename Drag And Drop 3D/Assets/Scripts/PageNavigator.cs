@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PageNavigator : MonoBehaviour
 {
     public GameObject Page01;
     public GameObject Page02;
     public GameObject Page03;
+    public GameObject ammeterNidle;
+    public Slider slider;
 
     public void Page01NextButton()
     {
@@ -36,5 +39,21 @@ public class PageNavigator : MonoBehaviour
     {
         Page03.SetActive(false);
         Page02.SetActive(true);
+    }
+    float yRotation = 90.0f;
+    public void AmmeterDeflection()
+    {
+
+        if(slider.value == 1 )
+        {
+            //ammeterNidle.transform.rotation = new Vector3(-0.75f, 0.0f, 0.0f);
+            //Vector3 newRotation = new Vector3(0, -80, -90);
+            //ammeterNidle.transform.eulerAngles = newRotation;
+            ammeterNidle.transform.rotation = Quaternion.Euler(new Vector3(0, -80, -90));
+        }
+    }
+    private void Update()
+    {
+        AmmeterDeflection();
     }
 }
