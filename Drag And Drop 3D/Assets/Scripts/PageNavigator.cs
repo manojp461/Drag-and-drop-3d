@@ -11,8 +11,22 @@ public class PageNavigator : MonoBehaviour
     public GameObject Page02;
     public GameObject Page03;
     public GameObject Page03NavigationButtons;
+    public GameObject Page04;
+    public GameObject Page04NavigationButtons;
     public GameObject ammeterNidle;
     public Slider slider;
+
+    public GameObject tube01;
+    public GameObject box01;
+    public GameObject sphere01;
+    public Material tube01materialBlue;
+    public Material tube01materialDefault;
+    public Animator tube01Animation;
+
+    private void Start()
+    {
+        tube01Animation.enabled = false;
+    }
 
     public void Page01NextButton()
     {
@@ -40,13 +54,27 @@ public class PageNavigator : MonoBehaviour
         Page03.SetActive(true);
         Page03NavigationButtons.SetActive(true);
     }
+    public void Page03NextButton()
+    {
+        Page03.SetActive(false);
+        Page04.SetActive(true);
+        Page04NavigationButtons.SetActive(true);
+        slider.gameObject.SetActive(false);
+    }
     public void Page03PreviousButton()
     {
         Page03.SetActive(false);
         Page03NavigationButtons.SetActive(false);
         Page02.SetActive(true);
     }
-    float yRotation = 90.0f;
+
+    public void Page04PreviousButton()
+    {
+        Page04.SetActive(false);
+        Page04NavigationButtons.SetActive(false);
+        Page03.SetActive(true);
+        slider.gameObject.SetActive(true);
+    }
     public void AmmeterDeflection()
     {
         switch (slider.value)
@@ -91,5 +119,20 @@ public class PageNavigator : MonoBehaviour
     private void Update()
     {
         AmmeterDeflection();
+    }
+
+    public void PlayAnimation()
+    {
+        tube01Animation.enabled = true;
+        tube01.GetComponent<MeshRenderer>().material = tube01materialDefault;
+        box01.SetActive(true);
+        sphere01.SetActive(true);
+    }
+    public void PauseAnimation()
+    {
+        tube01Animation.enabled = false;
+        tube01.GetComponent<MeshRenderer>().material = tube01materialBlue;
+        box01.SetActive(false);
+        sphere01.SetActive(false);
     }
 }
