@@ -6,16 +6,22 @@ using UnityEngine.UI;
 
 public class PageNavigator : MonoBehaviour
 {
+    [Header("Page01 GameObjects")]
     public GameObject Page01;
-    public GameObject Page01NavigationButtons;
+    public GameObject Page012D;
+
+    [Header("Page02 GameObject")]
     public GameObject Page02;
+
+    [Header("Page03 GameObjects")]
     public GameObject Page03;
-    public GameObject Page03NavigationButtons;
-    public GameObject Page04;
-    public GameObject Page04NavigationButtons;
-    public GameObject ammeterNidle;
+    public GameObject Page032D;
+    public GameObject ammeterNeedle;
     public Slider slider;
 
+    [Header("Page04 GameObjects")]
+    public GameObject Page04;
+    public GameObject Page042D;
     public GameObject tube01;
     public GameObject box01;
     public GameObject sphere01;
@@ -31,7 +37,7 @@ public class PageNavigator : MonoBehaviour
     public void Page01NextButton()
     {
         Page01.SetActive(false);
-        Page01NavigationButtons.SetActive(false);
+        Page012D.SetActive(false);
         Page02.SetActive(true);
     }
 
@@ -39,7 +45,7 @@ public class PageNavigator : MonoBehaviour
     {
         Page02.SetActive(false);
         Page01.SetActive(true);
-        Page01NavigationButtons.SetActive(true);
+        Page012D.SetActive(true);
         ObjectCollisionFunctionality.instance.cube01.transform.position = ObjectCollisionFunctionality.instance.orginalCube01Pos;
         ObjectCollisionFunctionality.instance.CorrectResultText.SetActive(false);
         ObjectCollisionFunctionality.instance.WrongResultText.SetActive(false);
@@ -52,71 +58,74 @@ public class PageNavigator : MonoBehaviour
     {
         Page02.SetActive(false);
         Page03.SetActive(true);
-        Page03NavigationButtons.SetActive(true);
+        Page032D.SetActive(true);
     }
     public void Page03NextButton()
     {
         Page03.SetActive(false);
-        Page03NavigationButtons.SetActive(false);
+        Page032D.SetActive(false);
         Page04.SetActive(true);
-        Page04NavigationButtons.SetActive(true);
+        Page042D.SetActive(true);
         slider.gameObject.SetActive(false);
+        // Reset Slider value to zero
         slider.value = 0;
     }
     public void Page03PreviousButton()
     {
         Page03.SetActive(false);
-        Page03NavigationButtons.SetActive(false);
+        Page032D.SetActive(false);
         Page02.SetActive(true);
     }
 
     public void Page04PreviousButton()
     {
         Page04.SetActive(false);
-        Page04NavigationButtons.SetActive(false);
+        Page042D.SetActive(false);
         Page03.SetActive(true);
-        Page03NavigationButtons.SetActive(true);
+        Page032D.SetActive(true);
         slider.gameObject.SetActive(true);
+        // Reset Slider value to zero
         slider.value = 0;
     }
     public void AmmeterDeflection()
     {
+        // Ammeter needle value
         switch (slider.value)
         {
             case 0:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -90, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, -90, -90));
                 break;
-            case 1: ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -80, -90));      
+            case 1: ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, -80, -90));      
                 break;
             case 2:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -60, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, -60, -90));
                 break;
             case 3:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -40, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, -40, -90));
                 break;
             case 4:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -20, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, -20, -90));
                 break;
             case 5:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -90));
                 break;
             case 6:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 20, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 20, -90));
                 break;
             case 7:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 40, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 40, -90));
                 break;
             case 8:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
                 break;
             case 9:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
                 break;
             case 10:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 80, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 80, -90));
                 break;
             case 11:
-                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 90, -90));
+                ammeterNeedle.transform.localRotation = Quaternion.Euler(new Vector3(0, 90, -90));
                 break;
         }
     }
@@ -127,6 +136,7 @@ public class PageNavigator : MonoBehaviour
 
     public void PlayAnimation()
     {
+        //Animation play method
         tube01Animation.enabled = true;
         tube01.GetComponent<MeshRenderer>().material = tube01materialDefault;
         box01.SetActive(true);
@@ -134,6 +144,7 @@ public class PageNavigator : MonoBehaviour
     }
     public void PauseAnimation()
     {
+        //Animation pause method
         tube01Animation.enabled = false;
         tube01.GetComponent<MeshRenderer>().material = tube01materialBlue;
         box01.SetActive(false);

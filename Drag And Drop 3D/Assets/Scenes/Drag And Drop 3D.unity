@@ -472,14 +472,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Page01: {fileID: 331333251}
-  Page01NavigationButtons: {fileID: 2035575769}
+  Page012D: {fileID: 2035575769}
   Page02: {fileID: 1513339242}
   Page03: {fileID: 336341070}
-  Page03NavigationButtons: {fileID: 303714364}
-  Page04: {fileID: 1170133319}
-  Page04NavigationButtons: {fileID: 2085919638}
-  ammeterNidle: {fileID: 2104473630}
+  Page032D: {fileID: 303714364}
+  ammeterNeedle: {fileID: 2104473630}
   slider: {fileID: 254907358}
+  Page04: {fileID: 1170133319}
+  Page042D: {fileID: 2085919638}
   tube01: {fileID: 391815128}
   box01: {fileID: 1072068677}
   sphere01: {fileID: 1043516939}
