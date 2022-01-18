@@ -57,9 +57,11 @@ public class PageNavigator : MonoBehaviour
     public void Page03NextButton()
     {
         Page03.SetActive(false);
+        Page03NavigationButtons.SetActive(false);
         Page04.SetActive(true);
         Page04NavigationButtons.SetActive(true);
         slider.gameObject.SetActive(false);
+        slider.value = 0;
     }
     public void Page03PreviousButton()
     {
@@ -73,7 +75,9 @@ public class PageNavigator : MonoBehaviour
         Page04.SetActive(false);
         Page04NavigationButtons.SetActive(false);
         Page03.SetActive(true);
+        Page03NavigationButtons.SetActive(true);
         slider.gameObject.SetActive(true);
+        slider.value = 0;
     }
     public void AmmeterDeflection()
     {
