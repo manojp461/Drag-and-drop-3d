@@ -10,6 +10,7 @@ public class PageNavigator : MonoBehaviour
     public GameObject Page01NavigationButtons;
     public GameObject Page02;
     public GameObject Page03;
+    public GameObject Page03NavigationButtons;
     public GameObject ammeterNidle;
     public Slider slider;
 
@@ -37,10 +38,12 @@ public class PageNavigator : MonoBehaviour
     {
         Page02.SetActive(false);
         Page03.SetActive(true);
+        Page03NavigationButtons.SetActive(true);
     }
     public void Page03PreviousButton()
     {
         Page03.SetActive(false);
+        Page03NavigationButtons.SetActive(false);
         Page02.SetActive(true);
     }
     float yRotation = 90.0f;
