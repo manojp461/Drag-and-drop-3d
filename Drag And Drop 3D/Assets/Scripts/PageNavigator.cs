@@ -28,10 +28,14 @@ public class PageNavigator : MonoBehaviour
     public Material tube01materialBlue;
     public Material tube01materialDefault;
     public Animator tube01Animation;
+    public Vector3 orginaltube01Pos;
 
     private void Start()
     {
+        // Animation Disabled
         tube01Animation.enabled = false;
+        // Tube01 orginal position
+        orginaltube01Pos = tube01.transform.position;
     }
 
     public void Page01NextButton()
@@ -59,6 +63,8 @@ public class PageNavigator : MonoBehaviour
         Page02.SetActive(false);
         Page03.SetActive(true);
         Page032D.SetActive(true);
+        // Reset Slider value to zero
+        slider.value = 0;
     }
     public void Page03NextButton()
     {
@@ -69,6 +75,8 @@ public class PageNavigator : MonoBehaviour
         slider.gameObject.SetActive(false);
         // Reset Slider value to zero
         slider.value = 0;
+        tube01.transform.position = orginaltube01Pos;
+        tube01Animation.enabled = false;
     }
     public void Page03PreviousButton()
     {
