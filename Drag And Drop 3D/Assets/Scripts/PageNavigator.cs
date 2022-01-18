@@ -49,13 +49,43 @@ public class PageNavigator : MonoBehaviour
     float yRotation = 90.0f;
     public void AmmeterDeflection()
     {
-
-        if(slider.value == 1 )
+        switch (slider.value)
         {
-            //ammeterNidle.transform.rotation = new Vector3(-0.75f, 0.0f, 0.0f);
-            //Vector3 newRotation = new Vector3(0, -80, -90);
-            //ammeterNidle.transform.eulerAngles = newRotation;
-            ammeterNidle.transform.rotation = Quaternion.Euler(new Vector3(0, -80, -90));
+            case 0:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -90, -90));
+                break;
+            case 1: ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -80, -90));      
+                break;
+            case 2:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -60, -90));
+                break;
+            case 3:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -40, -90));
+                break;
+            case 4:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, -20, -90));
+                break;
+            case 5:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -90));
+                break;
+            case 6:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 20, -90));
+                break;
+            case 7:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 40, -90));
+                break;
+            case 8:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
+                break;
+            case 9:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 60, -90));
+                break;
+            case 10:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 80, -90));
+                break;
+            case 11:
+                ammeterNidle.transform.localRotation = Quaternion.Euler(new Vector3(0, 90, -90));
+                break;
         }
     }
     private void Update()
