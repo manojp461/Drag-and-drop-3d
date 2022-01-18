@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PageNavigator : MonoBehaviour
 {
     public GameObject Page01;
+    public GameObject Page01NavigationButtons;
     public GameObject Page02;
     public GameObject Page03;
     public GameObject ammeterNidle;
@@ -15,6 +16,7 @@ public class PageNavigator : MonoBehaviour
     public void Page01NextButton()
     {
         Page01.SetActive(false);
+        Page01NavigationButtons.SetActive(false);
         Page02.SetActive(true);
     }
 
@@ -22,6 +24,7 @@ public class PageNavigator : MonoBehaviour
     {
         Page02.SetActive(false);
         Page01.SetActive(true);
+        Page01NavigationButtons.SetActive(true);
         ObjectCollisionFunctionality.instance.cube01.transform.position = ObjectCollisionFunctionality.instance.orginalCube01Pos;
         ObjectCollisionFunctionality.instance.CorrectResultText.SetActive(false);
         ObjectCollisionFunctionality.instance.WrongResultText.SetActive(false);
