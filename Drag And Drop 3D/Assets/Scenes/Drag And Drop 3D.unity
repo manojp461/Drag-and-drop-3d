@@ -181,6 +181,7 @@ MonoBehaviour:
   tube01materialDefault: {fileID: 670224309865224971, guid: 67f31c85b9b98fe44b9b6c60874e4245,
     type: 3}
   tube01Animation: {fileID: 391815129}
+  orginaltube01Pos: {x: 0, y: 0, z: 0}
 --- !u!114 &125299330
 MonoBehaviour:
   m_ObjectHideFlags: 0
